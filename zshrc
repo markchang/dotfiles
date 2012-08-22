@@ -8,8 +8,8 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="steeef"
 
 # Example aliases
-alias zshconfig="mate ~/.zshrc"
-alias ohmyzsh="mate ~/.oh-my-zsh"
+alias zshconfig="subl ~/.zshrc"
+alias ohmyzsh="subl ~/.oh-my-zsh"
 alias myth='ssh myth.chang.olin.edu'
 alias tv='ssh tv.chang.olin.edu'
 alias space='ssh space.olin.edu'
@@ -20,6 +20,8 @@ alias pgstop='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
 alias crashplan='ssh -L 4200:localhost:4243'
 alias headless-crashplan='vi ~/Library/Application\ Support/CrashPlan/ui.properties'
 
+# Disable hostname completion
+zstyle ':completion:*' hosts off
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -38,8 +40,8 @@ alias headless-crashplan='vi ~/Library/Application\ Support/CrashPlan/ui.propert
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git rails textmate ruby rvm brew)
+# Example format: plugins=(rails git textsubl ruby lighthouse)
+plugins=(git rails textsubl ruby rvm brew)
 
 source $ZSH/oh-my-zsh.sh
 
